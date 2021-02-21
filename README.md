@@ -1,6 +1,17 @@
 # Statemachine
 A basic statemachine implementation based on spring statemachine
 
+## Order Process
+```mermaid
+
+stateDiagram-v2
+    [*] --> PLACED
+    PLACED --> PROCESSING : process
+    PROCESSING --> SENT : send
+    SENT --> DELIVERED : deliver
+    DELIVERED --> [*]
+```
+
 ## Getting Started
 
 ### Reference Documentation
