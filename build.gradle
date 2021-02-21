@@ -10,11 +10,15 @@ sourceCompatibility = '15'
 
 repositories {
 	mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.statemachine:spring-statemachine-core:3.0.0-RC1'
+	implementation 'org.springframework.statemachine:spring-statemachine-recipes-common:3.0.0-RC1'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
